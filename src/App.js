@@ -1,22 +1,13 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from "./pages/About";
-import Certificate from "./pages/Certificate";
-import Connexion from "./pages/Connection";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
-const App = () => {
+import Navbar from "./pages/navbar";
+import Footer from "./pages/footer";
+
+function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" exact element={<Home />} />
-        <Route path="/a-propos" exact element={<About />} />
-        <Route path="/certification" exact element={<Certificate />} />
-        <Route path="/connexion" exact element={<Connexion />} />
-        <Route element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <Navbar />
+      <Footer />
+    </div>
   );
-};
+}
 
 export default App;
